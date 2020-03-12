@@ -17,4 +17,28 @@
     &--gradient{
         background: linear-gradient(#00d0ff, #25ffbf);
     }
+
+    &--plus{
+        background: linear-gradient(#00d0ff, #25ffbf);
+        display: inline-block;
+        padding: 14px 20px;
+        color: #fff;
+        border-radius: unset;
+        position: absolute;
+        top: -24px;
+        right: 50px;
+    }
+}
+
+@media screen and (min-width: 740px){
+
+    .btn{
+
+        &--right{
+        right: auto;
+        }
+        
+    }
+    
+    
 }

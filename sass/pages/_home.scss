@@ -1,5 +1,6 @@
 body{
     font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
 }
 
 
@@ -91,22 +92,93 @@ body{
 .lineup{
     padding: 7rem 0;
 
-    &__heading{
-        padding-bottom: 11rem;
+    &__item{
+        margin: 2rem 0;
+        position: relative;
     }
 
-    &__heading-text{
+    &__item-img{
+        display: block;
+        width: 100%;
+    }
+
+    &__item-content{
+        background-color: #fff;
+        padding: 2rem 3rem;
+        position: relative;
+        box-shadow: 50px 40px 115px rgba(0, 0, 0, 0.1);
+    }
+
+    &__artist{
+        font-size: 1.875rem;
+        font-weight: 600;
+        color: #000;
+    }
+
+    &__text{
+        color: #999;
+        line-height: 2;
+        margin-top: 1rem;
+        font-size: .9rem;
+    }
+
+}
+
+// HEADING
+
+.heading{
+    padding-bottom: 11rem;
+
+    &__text{
         color: hsl(0, 0%, 48%);
         text-transform: uppercase;
         font-weight: 600;
         font-size: .875rem;
     }
-
-    &__heading-h2{
+    
+    &__h2{
         font-weight: 600;
         color: #000;
         font-size: 3rem;
         line-height: 1.2;
     }
 
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 740px){
+
+    .lineup{
+        &__item{
+            display: flex;
+
+            &--sandra{
+                flex-direction: row-reverse;
+            }
+        }
+    
+        &__item-img{
+            display: block;
+            max-width: 360px;
+        }
+    
+        &__item-content{
+            position: absolute;
+            top: 100px;
+            right: 0;
+            width: calc(100% - 360px);
+            padding: 3rem 2rem;
+
+            &--sandra{
+                left: 0;
+            }
+        }
+    }
+    
 }
