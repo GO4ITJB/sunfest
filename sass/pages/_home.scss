@@ -8,6 +8,10 @@ body{
     width: 90%;
     margin: 0 auto;
 
+    &--artist{
+        width: 92%;
+    }
+
 }
 
 .header{
@@ -143,6 +147,38 @@ body{
         line-height: 1.2;
     }
 
+}
+
+// <----ARTISTS---->
+
+.artist{
+    padding: 1rem 0;
+    background-color: #fff;
+
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-gap: 10px 30px;
+        text-align: center; //240px standard
+    }
+
+    &__item{
+
+        &:nth-child(even){
+            margin-top: 90px;
+        }
+    }
+
+    &__heading{
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+
+    &__btn-box{
+        width: 60%;
+        margin: 6rem auto 0;
+    }
 }
 
 
