@@ -1,0 +1,16 @@
+.btn{
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 1rem 3rem;
+    color: #000;
+    cursor: pointer;
+
+
+    &--margin{
+        margin-bottom: 10px;
+    }
+
+    &--gradient{
+        background: linear-gradient(#00d0ff, #25ffbf);
+    }
+}

@@ -1,0 +1,80 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.header{
+
+    &__hero{
+        margin-top: 70px;
+        position: relative;
+    }
+
+    &__hero-img{
+        width: 100vw;
+        -o-object-fit: cover;
+           object-fit: cover;
+        height: 100vh;
+        display: block;
+    }
+
+    &__hero-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        color: #fff;
+        text-align: center;
+    }
+
+    &__hero-heading{
+        display: inline-block;
+        background: -webkit-gradient(linear, left top, left bottom, from(#00d0ff), to(#25ffbf));
+        background: linear-gradient(#00d0ff, #25ffbf);
+        -webkit-background-clip: text;
+                background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        font-size: 6rem;
+        padding: 40px;
+        font-weight: 500;
+        font-family: mountains;
+        border-top: 1px solid transparent; // this removes a border thats is only visible on iPhone...weird
+    }
+
+    &__hero-date{
+        margin-bottom: -40px;
+        font-size: 1.2rem;
+    }
+
+    &__hero-list{
+        margin: 4rem 0;
+        font-size: 1rem;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: center;
+                justify-content: center;
+    }
+
+    &__hero-item{
+        font-size: 1.2rem;
+        padding: 0 .5rem;
+    }
+
+    &__hero-item-span{
+        display: block;
+        //font-size: 2rem;
+    }
+
+    &__btn-box{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
