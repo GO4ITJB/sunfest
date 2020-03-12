@@ -4,7 +4,11 @@
     padding: 1rem 3rem;
     color: #000;
     cursor: pointer;
+    font-weight: 500;
 
+    &--uppercase{
+        text-transform: uppercase;
+    }
 
     &--margin{
         margin-bottom: 10px;

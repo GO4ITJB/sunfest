@@ -43,14 +43,14 @@ body{
         -webkit-text-fill-color: transparent;
         color: transparent;
         font-size: 6rem;
-        padding: 40px;
+        padding: 30px;
         font-weight: 500;
         font-family: mountains;
-        border-top: 1px solid transparent; // this removes a border thats is only visible on iPhone...weird
+        border-top: 1px solid transparent; // this removes a border that appers on iphone/ipad...weird
     }
 
     &__hero-date{
-        margin-bottom: -40px;
+        margin-bottom: -20px;
         font-size: 1.2rem;
     }
 
@@ -77,4 +77,36 @@ body{
         width: 70%;
         margin: 0 auto;
     }
+}
+
+// MAIN
+.section-background{
+    background: url(../img/middle-cover.jpg) no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    min-height: 4640px;
+}
+// <---LINEUP--->
+
+.lineup{
+    padding: 7rem 0;
+
+    &__heading{
+        padding-bottom: 11rem;
+    }
+
+    &__heading-text{
+        color: hsl(0, 0%, 48%);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: .875rem;
+    }
+
+    &__heading-h2{
+        font-weight: 600;
+        color: #000;
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
 }
