@@ -12,6 +12,10 @@ body{
         width: 92%;
     }
 
+    &--slider{
+        width: 100%;
+    }
+
 }
 
 .header{
@@ -89,12 +93,13 @@ body{
     background: url(../img/middle-cover.jpg) no-repeat;
     background-size: 100% auto;
     width: 100%;
-    min-height: 4640px;
+    height: 135vh;
+    //min-height: 4640px;
 }
 // <---LINEUP--->
 
 .lineup{
-    padding: 7rem 0;
+    padding: 7rem 0 0;
 
     &__item{
         margin: 2rem 0;
@@ -133,14 +138,14 @@ body{
 .heading{
     padding-bottom: 11rem;
 
-    &__text{
+    &__sub{
         color: hsl(0, 0%, 48%);
         text-transform: uppercase;
         font-weight: 600;
         font-size: .875rem;
     }
     
-    &__h2{
+    &__main{
         font-weight: 600;
         color: #000;
         font-size: 3rem;
@@ -152,8 +157,9 @@ body{
 // <----ARTISTS---->
 
 .artist{
+    margin-top: 10rem;
     padding: 1rem 0;
-    background-color: #fff;
+    //background-color: #fff;
 
     &__items{
         display: grid;
@@ -179,6 +185,10 @@ body{
         width: 60%;
         margin: 6rem auto 0;
     }
+}
+
+.events{
+    padding: 5rem 0 0;
 }
 
 
