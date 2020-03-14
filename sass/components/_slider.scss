@@ -76,3 +76,22 @@ input:checked + .slide-container  .slide {
 }
 
 input:checked + .slide-container .slider__nav label { display: block; }
+
+.slide__content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    display: block;
+    
+
+    &:hover{
+        opacity: 1;
+        transition: all .2s;
+    }
+}

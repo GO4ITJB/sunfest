@@ -16,6 +16,10 @@ body{
         width: 100%;
     }
 
+    &--news{
+        width: 93%;
+    }
+
 }
 
 .header{
@@ -44,7 +48,6 @@ body{
     }
 
     &__hero-heading{
-        display: inline-block;
         background: -webkit-gradient(linear, left top, left bottom, from(#00d0ff), to(#25ffbf));
         background: linear-gradient(#00d0ff, #25ffbf);
         -webkit-background-clip: text;
@@ -55,11 +58,12 @@ body{
         padding: 30px;
         font-weight: 500;
         font-family: mountains;
+        line-height: 1.1;
         border-top: 1px solid transparent; // this removes a border that appers on iphone/ipad...weird
     }
 
     &__hero-date{
-        margin-bottom: -20px;
+        margin-bottom: -25px;
         font-size: 1.2rem;
     }
 
@@ -99,7 +103,7 @@ body{
 // <---LINEUP--->
 
 .lineup{
-    padding: 7rem 0 0;
+    padding: 2rem 0;
 
     &__item{
         margin: 2rem 0;
@@ -135,8 +139,10 @@ body{
 
 // HEADING
 
-.heading{
-    padding-bottom: 11rem;
+.heading{ 
+    padding: 8rem 0;
+
+   
 
     &__sub{
         color: hsl(0, 0%, 48%);
@@ -157,8 +163,7 @@ body{
 // <----ARTISTS---->
 
 .artist{
-    margin-top: 10rem;
-    padding: 1rem 0;
+    padding: 2rem 0;
     //background-color: #fff;
 
     &__items{
@@ -187,9 +192,65 @@ body{
     }
 }
 
+// <----EVENTS---->
+
 .events{
-    padding: 5rem 0 0;
+    padding: 2rem 0;
 }
+
+// <----NEWS---->
+
+.news{
+    padding: 2rem 0;
+
+    &__post{
+        box-shadow: 10px 40px 115px 27px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    &__post-date{
+        position: absolute;
+        top: 20px;
+        left: -13px;
+        background: linear-gradient(#00d0ff, #25ffbf);
+        padding: .5rem 1.2rem;
+        color: #fff;
+        font-size: 1.25rem;
+    }
+
+    &__post-content{
+        background-color: #fff;
+        padding: 2rem;
+    }
+
+    &__post-heading{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__post-author{
+        font-size: .75rem;
+        font-weight: 500;
+        margin-top: .3rem;
+
+        span{
+            padding: 0 .3rem;
+        }
+    }
+
+    &__post-text{
+        color: #999;
+        padding: 1rem 0;
+        line-height: 2;
+        font-size: .9rem;
+    }
+}
+
+
+
+
+
+
 
 
 
