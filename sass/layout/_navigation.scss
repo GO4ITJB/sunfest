@@ -31,35 +31,40 @@
     }
 
     &__menu-bg{
-        height: 0;
+        height: 100%;
         width: 0;
         position: fixed;
         top: 70px;
-        background-color: #21D4FD; 
-        background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);  
+        left: 0;
+        background-color: #000; 
         z-index: 1000;
+        transition: all .7s; // Menu background speed
     }
 
     &__menu{
         height: 100vh;
-        width: 100%;
+        width: 65vw;
         position: fixed;
-        left: 0;
-        top: -100%; //Make it dissapear to the right, also change check value 
+        left: -100%;
+        top: 0;            //Make it dissapear to the top, also change check value 
+        // right: -100%;   //Make it dissapear to the right, also change check value
+        //left: -100%;     //Make it dissapear to the left, also change check value 
+        //bottom: -100%;   //Make it dissapear to the bottom, also change check value 
+
         z-index: 1500;
-        // right: -100%;   Make it dissapear to the right, also change check value
-        opacity: 0;
-        transition: all 1s;
+        opacity: 1;
+        transition: all .8s; // Menu speed
     }
 
     &__list{
         height: 100vh;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        //align-items: center;
         flex-direction: column;
         list-style: none;
         margin-top: 100px;
+        padding: 0 .5rem;
         
     }
 
@@ -71,9 +76,9 @@
         
         &:link,
         &:visited{
-            font-size: 2rem;
+            font-size: 1.2rem;
             color: #fff;
-            font-weight: 700;
+            font-weight: 600;
             text-decoration: none;
             // background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #000 50%);
             background-size: 250%;  
@@ -83,7 +88,7 @@
         &:hover,
         &:active{
             background-position: 100%;
-            color: pink;
+            background: linear-gradient(#00d0ff, #25ffbf);
             padding: 0 .5rem;
         }
         
@@ -93,20 +98,18 @@
     // <----NOW U SEE IT..(magic)..NOW U DON'T---->
     &__toggler:checked ~ &__menu-bg{
         height: 100vh;
-        width: 100vw;
-        transition: height 1s;
+        width: 65vw;
     }
 
     &__toggler:checked ~ &__menu{
-        opacity: 1;
-        top: 0;
+        left: 0;
     }
 
     // <---ICON--->
 
     &__ham-icon{
         position: relative;
-        margin-top: .2rem;
+        margin-top: .8rem;
         margin-right: 1rem;
 
         &,
@@ -131,4 +134,31 @@
     }
 
     
+}
+
+@media screen and (min-width: 740px){
+
+    .nav{
+
+        &__menu{
+            height: 100vh;
+            width: 40vw;
+        }
+
+        &__toggler:checked ~ &__menu-bg{
+            height: 100vh;
+            width: 40vw;
+            transition: all 1s;
+        }
+
+        &__link{
+        
+            &:link,
+            &:visited{
+                font-size: 1.5rem;
+            }
+            
+        }
+    }
+
 }

@@ -196,12 +196,14 @@ body{
 
 .events{
     padding: 2rem 0;
+    overflow: hidden;
 }
 
 // <----NEWS---->
 
 .news{
     padding: 2rem 0;
+    
 
     &__post{
         box-shadow: 10px 40px 115px 27px rgba(0, 0, 0, 0.1);
