@@ -94,10 +94,10 @@ body{
 
 // MAIN
 .section-background{
-    background: url(../img/middle-cover.jpg) no-repeat;
+    background: url(../../img/elements-total-background.jpg) no-repeat;
     background-size: 100% auto;
     width: 100%;
-    height: 135vh;
+    height: 100%;
     //min-height: 4640px;
 }
 // <---LINEUP--->
@@ -164,13 +164,9 @@ body{
 
 .artist{
     padding: 2rem 0;
-    //background-color: #fff;
 
     &__items{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        grid-gap: 10px 30px;
-        text-align: center; //240px standard
+        text-align: center;
     }
 
     &__item{
@@ -208,6 +204,10 @@ body{
     &__post{
         box-shadow: 10px 40px 115px 27px rgba(0, 0, 0, 0.1);
         position: relative;
+    }
+
+    &__post-img{
+        display: block;
     }
 
     &__post-date{
@@ -248,17 +248,69 @@ body{
     }
 }
 
+// <----FOOTER---->
 
+.footer{
+    background: url(../../img/footer-cover.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100vw;
+    position: relative;
+    padding: 12rem 0;
 
+    &:before{
+        content: "";
+        height: 100%;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        opacity: .7;
 
+    }
 
+    &__content{
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+    }
 
+    &__heading{
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
 
+    &__sub-head{
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
 
+    &__text{
+        font-size: .7rem;
+        padding: 2rem 0;
+    }
 
+    &__list-item{
+        display: inline-block;
+        font-family: icomoon;
+        padding: 0 1rem;
 
-
-
+        &--1:after{
+            content: "\f09a";
+        }
+        &--2:after{
+            content: "\f16d";
+        }
+        &--3:after{
+            content: "\f099";
+        }
+        &--4:after{
+            content: "\f0e1";
+        }
+    }
+}
 
 
 @media screen and (min-width: 740px){
@@ -290,4 +342,36 @@ body{
         }
     }
     
+}
+
+@media screen and (min-width: 1440px){
+
+    .container{
+
+        &--lineup, &--events{
+            width: 55%;
+        }
+    
+        &--artist{
+            width: 45%;
+        }
+    
+
+        &--slider{
+            width: 40%;
+        }
+    
+        &--news{
+            width: 55%;
+        }
+    
+    }
+
+    .artist{
+
+        &__btn-box{
+            width: 30%;
+        }
+
+    }
 }

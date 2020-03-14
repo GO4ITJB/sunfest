@@ -11,7 +11,7 @@
     z-index: 1000;
 
     &__logo{
-        margin-left: 0px;
+        margin-left: 1rem;
         margin-right: auto;
         font-size: 1.2rem;
         color: #fff;
@@ -161,4 +161,17 @@
         }
     }
 
+}
+
+@media screen and (min-width: 1440px){
+    .nav{
+
+        &__logo{
+            //margin-left: 2rem;
+        }
+
+        &__ham-icon{
+            margin-right: 2rem;
+        }
+    }
 }

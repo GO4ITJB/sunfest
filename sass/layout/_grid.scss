@@ -1,4 +1,22 @@
-//display: grid;
-//        align-items: center;
-//        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); //240px standard
+.artist{
 
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-gap: 10px 30px;
+        text-align: center; //240px standard
+    }
+
+}
+
+@media screen and (min-width: 740px){
+    .news{
+
+        &__posts{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-gap: 20px;
+        }
+    
+    }
+}
