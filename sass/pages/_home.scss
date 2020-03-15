@@ -254,9 +254,10 @@ body{
     background: url(../img/footer-cover.jpg) no-repeat;
     background-size: cover;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     position: relative;
     padding: 12rem 0;
+    overflow: hidden;
 
     &:before{
         content: "";
@@ -315,6 +316,14 @@ body{
 
 @media screen and (min-width: 740px){
 
+    .container{
+    
+        &--slider{
+            width: 90%;
+        }
+    
+    }
+
     .lineup{
         &__item{
             display: flex;
@@ -355,21 +364,14 @@ body{
 
     .container{
 
-        &--lineup, &--events{
-            width: 55%;
+        &--lineup, &--events, &--artist, &--news{
+            width: 50%;
         }
     
-        &--artist{
-            width: 45%;
-        }
     
-
         &--slider{
             width: 40%;
-        }
-    
-        &--news{
-            width: 55%;
+            display: none;
         }
     
     }

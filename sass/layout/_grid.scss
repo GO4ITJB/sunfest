@@ -10,6 +10,19 @@
 }
 
 @media screen and (min-width: 740px){
+
+    .artist{
+
+        &__items{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px 30px;
+            text-align: center; //240px standard
+        }
+    
+    }
+
+
     .news{
 
         &__posts{

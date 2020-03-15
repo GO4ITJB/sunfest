@@ -1,5 +1,3 @@
-
-
 .slides {
     padding: 0;
     width: 100%;
@@ -40,6 +38,52 @@
     height: 100%;
 }
 
+.slide__content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    height: 420px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+
+    &-h3{
+        font-weight: 600;
+        font-size: 2rem;
+        width: 75%;
+    }
+
+    &-text{
+        font-size: .8rem;
+    }
+
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 420px;
+        width: 100%;
+        background-color: #000;
+        opacity: .6;
+        z-index: -1;
+    }
+}
+
+.slider__nav{
+    height: 420px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .slider__nav label {
     width: 48px;
     height: 48px;
@@ -47,22 +91,29 @@
     background: linear-gradient(#00d0ff, #25ffbf);
     border-radius: 50%;
     position: absolute;
-    top: 50%;
     margin: 0 5px;
-    
-
-    opacity: 1;
     z-index: 9;
     cursor: pointer;
 
     transition: opacity .2s;
 
-    color: #FFF;
-    font-size: 33px;
-    text-align: center;
-    font-family: "Varela Round", sans-serif;
-    background-color: rgba(255, 255, 255, .3);
-    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+    &.prev:before{
+        content: "\f053";
+        font-family: icomoon;
+        position: relative;
+        top: 15px;
+        left: 16px;
+        color: #fff;
+    }
+
+    &.next:before{
+        content: "\f054";
+        font-family: icomoon;
+        position: relative;
+        top: 15px;
+        left: 20px;
+        color: #fff;
+    }
 }
 
 .slider__nav .next { right: 0; }
@@ -77,21 +128,106 @@ input:checked + .slide-container  .slide {
 
 input:checked + .slide-container .slider__nav label { display: block; }
 
-.slide__content{
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #fff;
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    display: block;
-    
+.slider{
+    display: none;
+}
 
-    &:hover{
-        opacity: 1;
-        transition: all .2s;
+// Desktop
+
+@media screen and (min-width: 1440px){
+
+    .slider{
+        display: block;
+        position: relative;
+        height: 448px;
+        overflow: hidden;
+    
+        &__slides{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            //background: pink;
+            margin: 0;
+            padding: 0;
+        }
+    
+        &__slide{
+            position: relative;
+            width: 16.666%;
+            height: 100%;
+            //border-right: 1px solid red;
+            float: left;
+            transition: .5s;
+            text-align: center;
+            box-sizing: border-box;
+        } 
+    
+        &__slides:hover &__slide{
+            width: 14.4%;
+        }
+    
+        &__slides &__slide:hover{
+            width: 28%;
+        }
+    
+        &__content{
+            background-size: cover;
+            height: 448px;
+            width: 100%;
+    
+                &--1{
+                    background: url(../img/next-event-1.jpg) no-repeat;
+                }
+                &--2{
+                    background: url(../img/next-event-2.jpg) no-repeat;
+                }
+                &--3{
+                    background: url(../img/next-event-3.jpg) no-repeat;
+                }
+                &--4{
+                    background: url(../img/next-event-1.jpg) no-repeat;
+                }
+                &--5{
+                    background: url(../img/next-event-2.jpg) no-repeat;
+                }
+                &--6{
+                    background: url(../img/next-event-3.jpg) no-repeat;
+                }
+    
+        }
+    
+        &__text{
+            opacity: 0;
+            color: #fff;
+            //text-shadow: 1px 1px 10px #fff;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        &__paragraph{
+            font-size: .8rem;
+        }
+    
+        &__slide-bg{
+            background-color: #000;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            //position: relative;
+            display: flex;
+            align-items: center;
+        }
+    
+        &__content:hover &__text{
+            opacity: 1.2;
+            transition: 1s;
+        }
+    
+        &__slide-bg:hover{
+            opacity: .8;
+        }
+    
     }
 }
